@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Disease Prediction</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='predstyle.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="logo">Disease Predictor</a>
+			<div class="header-right">
+			  <a class="active" href="/">Home</a>
+			</div>
+		  </div>
+
+<h1>Final Predictions</h1>
+
+<table id="customers">
+  <tr>
+    <th>Alogrithm</th>
+    <th>Prediction</th>
+  </tr>
+  <tr>
+    <td>DECISION TREE</td>
+    <td>{{prediction[0]}}</td>
+  </tr>
+  <tr>
+    <td>RANDOM FOREST</td>
+    <td>{{prediction[1]}}</td>
+  </tr>
+  <tr>
+    <td>NAVIE BAYES</td>
+    <td>{{prediction[2]}}</td>
+  </tr>
+</table>
+<img src="static/f.svg" style="width :500px; align-items:center; padding-left: 30%;"></img>
+	</body>
+</html>

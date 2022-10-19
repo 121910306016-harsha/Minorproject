@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Disease Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <div class="home">
+        <div class="img" >
+            <img src="static\doctor.jpg" alt="'gif" style="width:700px;height:700px; float:left;transform:scale(-1, 1);"></img>
+        </div>
+    	<div class="ml-container">
+            <h1>Select Symptoms</h1>
+    		<form method="post" action="/predict">
+                <select id="s1" name="s1">
+                    {%for i in d%}
+                    <option>{{i}}</option>
+                    {%endfor%}
+                </select>
+                <br>
+                <select id="s2" name="s2">
+                    {%for i in d%}
+                    <option>{{i}}</option>
+                    {%endfor%}
+                </select>
+                <br>
+                <select id="s3" name="s3">
+                    {%for i in d%}
+                    <option>{{i}}</option>
+                    {%endfor%}
+                </select>
+                <br>
+                <select id="s4" name="s4">
+                    {%for i in d%}
+                    <option>{{i}}</option>
+                    {%endfor%}
+                </select>
+                <br>
+                <select id="s5" name="s5">
+                    {%for i in d%}
+                    <option>{{i}}</option>
+                    {%endfor%}
+                </select>
+                <br>
+                <br>
+                <input class="button" type="submit" value="Predict">
+        	</form>
+    	</div>
+    </div>
+
+    </body>
+</html>
